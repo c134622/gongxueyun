@@ -78,7 +78,7 @@ class FuckGongXueYun:
         except Exception as e:
             print(e, e.__traceback__.tb_lineno)
             if self.email != self._Admin:
-                self.send_email(self.email, "登录失败，已自动联系管理员")
+                self.send_email(self.email, "登录失败，已联系管理员")
             self.send_email(self._Admin,
                             f"错误函数: LOGIN\n{self.phone}--{e}\nERROR_Line{e.__traceback__.tb_lineno}")
             return None
@@ -106,7 +106,7 @@ class FuckGongXueYun:
             print("打卡失败")
             print(e, e.__traceback__.tb_lineno)
             if self.email != self._Admin:
-                self.send_email(self.email, "获取参数失败，已自动联系管理员")
+                self.send_email(self.email, "获取参数失败，已联系管理员")
             self.send_email(self._Admin,
                             f"错误函数: PlanID\n{self.phone}--{e}\nERROR_Line{e.__traceback__.tb_lineno}")
             return None
@@ -114,7 +114,7 @@ class FuckGongXueYun:
     def sign_in(self):
         if self.sign_in_sign is None:
             if self.email != self._Admin:
-                self.send_email(self.email, "所需参数为空，无法进行签到请求，已自动联系管理员")
+                self.send_email(self.email, "所需参数为空，无法进行签到请求，已联系管理员")
             self.send_email(self._Admin, "所需参数为空，无法进行签到请求--" + self.phone + "\n" + str(self.planId))
             return None
         t = str(int(time.time()) * 1000)
@@ -166,7 +166,7 @@ class FuckGongXueYun:
                     self.send_email(self.email, '签到失败' + '\n' + json.dumps(json_data, ensure_ascii=False))
             except Exception as e:
                 if self.email != self._Admin:
-                    self.send_email(self.email, "签到失败，已自动联系管理员")
+                    self.send_email(self.email, "签到失败，已联系管理员")
                 self.send_email(self._Admin,
                                 f"错误函数: SIGN_IN\n{self.phone}--{e}\nERROR_Line{e.__traceback__.tb_lineno}")
 
