@@ -1,0 +1,15 @@
+{
+  "info": [
+    {
+      "phone": "phone",
+      "password": "password",
+      "email": "email",
+      "country": "country",
+      "province": "province",
+      "city": "city",
+      "address": "address",
+      "longitude": "经度",
+      "latitude": "纬度"
+    }
+  ]
+}
