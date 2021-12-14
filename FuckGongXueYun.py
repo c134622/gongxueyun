@@ -2,11 +2,8 @@ import json
 import threading
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
-from binascii import a2b_hex
-import base64
 import time
 import requests
-import ssl
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
