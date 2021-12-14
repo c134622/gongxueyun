@@ -172,7 +172,7 @@ class FuckGongXueYun:
 
     def send_email(self, receivers, data):
         sender = '发送者邮箱'
-        auth_passport = ''  # auth_passport QQ邮箱那可获得
+        auth_passport = ''  # auth_passport QQ邮箱首页设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务——生成授权码
         server = smtplib.SMTP()
         server.connect('smtp.qq.com')
         server.login('登陆者邮箱', auth_passport)
